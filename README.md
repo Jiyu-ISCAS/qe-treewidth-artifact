@@ -99,7 +99,8 @@ qe-treewidth-artifact/
 
 ### Operating System
 
-We test this artifact on Windows 11 WSL 2 Ubuntu 24.04 and TACAS 2026 VM ubuntu 25.04 available at <https://zenodo.org/records/17171929>. We recommend running this artifact in Linux.
+This artifact has been tested on Windows 11 (`WSL 2`, Ubuntu 24.04) and on the TACAS 2026 virtual machine (`Ubuntu 25.04`) available at <https://zenodo.org/records/17171929>
+. We recommend running the artifact on a native Linux environment.
 
 ### Hardware Requirements
 
