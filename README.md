@@ -122,7 +122,7 @@ tests/
 └── ...
 ```
 
-The results for each instance are stored in `.csv` file under the above directory, easy to read.
+Each instance’s results are stored as a `.csv` file under the above directory, easy to read.
 
 ### LRA examples
 
