@@ -20,3 +20,7 @@ python3 src/FME/compare_single_input.py \
     --seed 2027 \
     --cap 100000 \
     --output tests/smoke_test/result.json
+cat tests/smoke_test/result.json
+
+python3 src/FME/summarize_fme_results.py --input tests/smoke_test/result.json --out tests/smoke_test/summary.json
+cat tests/smoke_test/summary.json
