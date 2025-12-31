@@ -4,6 +4,10 @@
 csvFile = "./tests/CAD_results/Ex7.csv";
 TimeLimit = 7200;
 
+(* Use $ScriptCommandLine to get only the arguments after the script name *)
+args = $ScriptCommandLine;
+runAll = Length[args] <= 1; (* True if no flags were passed *)
+
 (* 1. Define the input expression *)
 expr = Rationalize[(0.0 <= (5.0 - (((-8.0*(x1*x2)) + (-6.0* x1)) + (-5.0* x3)))) && 
     (0.0 <= (9.0 - (((10.0*(x4*x4)) + (-4.0* x4)) + (4.0*(x1* x3))))) && 
@@ -70,14 +74,18 @@ RunAndReport[label_, variables_] := Module[{time, result, cellCount, csvRow, str
 
 (* 4. Run the instances *)
 
-(* Case 1: Maple's SuggestVariableOrder *)
-RunAndReport["(1) Maple SuggestVariableOrder", {x4, x3, x2, x5, x1, x6}];
+If[runAll || MemberQ[args, "-SVO"],
+  RunAndReport["(1) Maple SuggestVariableOrder", {x4, x3, x2, x5, x1, x6}]
+];
 
-(* Case 2: Brown's heuristics *)
-RunAndReport["(2) Brown heuristics", {x3, x2, x4, x5, x1, x6}];
+If[runAll || MemberQ[args, "-Brown"],
+  RunAndReport["(2) Brown heuristics", {x3, x2, x4, x5, x1, x6}]
+];
 
-(* Case 3: PEO *)
-RunAndReport["(3) PEO", {x3, x2, x1, x4, x5, x6}];
+If[runAll || MemberQ[args, "-PEO"],
+  RunAndReport["(3) PEO", {x3, x2, x1, x4, x5, x6}]
+];
 
-(* Case 4: Brown's heuristics + tree decomposition *)
-RunAndReport["(4) Brown + Tree Decomp", {x3, x1, x2, x4, x5, x6}];
+If[runAll || MemberQ[args, "-TD"],
+  RunAndReport["(4) Brown + Tree Decomp", {x3, x1, x2, x4, x5, x6}]
+];
