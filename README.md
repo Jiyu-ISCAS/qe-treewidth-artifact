@@ -11,7 +11,7 @@ TACAS 2026
 ## Directory structure
 
 ```shell
-./qe-treewidth-artifact
+qe-treewidth-artifact/
 ├── examples/
     ├── LRA/  # randomly generated examples written in pycddlib format and SMT-LIB format
     ├── NRA/  # only SMT-LIB format
@@ -89,7 +89,42 @@ TACAS 2026
         bash scripts/bulk_CAD.sh
         ```
 
-## Explanation on LRA examples
+## Explanation on important files
+
+### Heuristic results
+
+After running `bash scripts/heuristic.sh` new working directories are created under `tests/`
+
+```shell
+tests/
+├── graph/  # associated primal graphs, formats see https://pacechallenge.org/2017/treewidth/
+├── intermediate/  # intermediate results or each LRA/NRA instance consist of 2 parts: the substitution map mapping original variable names to x1 ... xn; and standard Mathematica format formula
+├── order/  # the results of our heuristic algorithm and other heuristics
+├── TD_results/  # tree decomposition results, formats see https://pacechallenge.org/2017/treewidth/
+└── ...
+```
+
+### LRA/FME results
+
+```shell
+tests/
+├── FME_results/
+└── ...
+```
+
+For each set of 10 instances we record three different elimination orders in separate `.json` files and include a summary `.json` file in the same directory. Note that for larger instances (IDs 2–5) random ordering performs poorly: FME may terminate early after reaching the limit of $10^7$ inequality constraints. In those cases the recorded `final_count` is the estimate at termination and the `time_s` is the runtime at termination.
+
+### NRA/CAD results
+
+```shell
+tests/
+├── CAD_results/
+└── ...
+```
+
+The results for each instance are stored in `.csv` file under the above directory, easy to read.
+
+### LRA examples
 
 ```shell
 LRA/
