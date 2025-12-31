@@ -1,0 +1,23 @@
+[
+  {
+    "order": "random",
+    "success": 9,
+    "abort": 1,
+    "ave_cnt": 1519900.3333333333,
+    "ave_runtime": 15.38986870511144
+  },
+  {
+    "order": "greedy",
+    "success": 10,
+    "abort": 0,
+    "ave_cnt": 4404.7,
+    "ave_runtime": 0.01848233549972065
+  },
+  {
+    "order": "heuristic",
+    "success": 10,
+    "abort": 0,
+    "ave_cnt": 3253.3,
+    "ave_runtime": 0.012092922099327552
+  }
+]

@@ -1,0 +1,629 @@
+[
+  {
+    "file": "LRA_Examples/Raw/30-var-150-formula-1-d-1.ine",
+    "n_vars": 30,
+    "y_requested": 5,
+    "y_actual": 5,
+    "chosen_subset_1based": [
+      6,
+      10,
+      21,
+      24,
+      25
+    ],
+    "random_explicit_order_1based": [
+      24,
+      21,
+      6,
+      25,
+      10
+    ],
+    "actual_random_order_used_1based": [
+      24,
+      21,
+      6,
+      25,
+      10
+    ],
+    "actual_greedy_order_used_1based": [
+      25,
+      24,
+      10,
+      21,
+      6
+    ],
+    "heuristic_explicit_order_1based": [
+      25,
+      24,
+      21,
+      10,
+      6
+    ],
+    "actual_heuristic_order_used_1based": [
+      25,
+      24,
+      21,
+      10,
+      6
+    ],
+    "result_random": {
+      "aborted": false,
+      "final_count": 9250,
+      "time_s": 0.12045558600220829
+    },
+    "result_greedy": {
+      "aborted": false,
+      "final_count": 5197,
+      "time_s": 0.04283055900305044
+    },
+    "result_heuristic": {
+      "aborted": false,
+      "final_count": 5197,
+      "time_s": 0.044366957001329865
+    }
+  },
+  {
+    "file": "LRA_Examples/Raw/30-var-150-formula-1-d-10.ine",
+    "n_vars": 30,
+    "y_requested": 5,
+    "y_actual": 5,
+    "chosen_subset_1based": [
+      7,
+      20,
+      23,
+      26,
+      30
+    ],
+    "random_explicit_order_1based": [
+      7,
+      23,
+      20,
+      26,
+      30
+    ],
+    "actual_random_order_used_1based": [
+      7,
+      23,
+      20,
+      26,
+      30
+    ],
+    "actual_greedy_order_used_1based": [
+      26,
+      20,
+      30,
+      23,
+      7
+    ],
+    "heuristic_explicit_order_1based": [
+      26,
+      30,
+      20,
+      23,
+      7
+    ],
+    "actual_heuristic_order_used_1based": [
+      26,
+      30,
+      20,
+      23,
+      7
+    ],
+    "result_random": {
+      "aborted": true,
+      "final_count": 328193,
+      "time_s": null
+    },
+    "result_greedy": {
+      "aborted": false,
+      "final_count": 2361,
+      "time_s": 0.018601224997837562
+    },
+    "result_heuristic": {
+      "aborted": false,
+      "final_count": 2361,
+      "time_s": 0.018043222997221164
+    }
+  },
+  {
+    "file": "LRA_Examples/Raw/30-var-150-formula-1-d-2.ine",
+    "n_vars": 30,
+    "y_requested": 5,
+    "y_actual": 5,
+    "chosen_subset_1based": [
+      5,
+      10,
+      20,
+      21,
+      30
+    ],
+    "random_explicit_order_1based": [
+      10,
+      20,
+      5,
+      30,
+      21
+    ],
+    "actual_random_order_used_1based": [
+      10,
+      20,
+      5,
+      30,
+      21
+    ],
+    "actual_greedy_order_used_1based": [
+      20,
+      30,
+      21,
+      10,
+      5
+    ],
+    "heuristic_explicit_order_1based": [
+      30,
+      20,
+      21,
+      10,
+      5
+    ],
+    "actual_heuristic_order_used_1based": [
+      30,
+      20,
+      21,
+      10,
+      5
+    ],
+    "result_random": {
+      "aborted": false,
+      "final_count": 200237,
+      "time_s": 3.360605609999766
+    },
+    "result_greedy": {
+      "aborted": false,
+      "final_count": 51249,
+      "time_s": 0.5628473649994703
+    },
+    "result_heuristic": {
+      "aborted": false,
+      "final_count": 51249,
+      "time_s": 0.573937103003118
+    }
+  },
+  {
+    "file": "LRA_Examples/Raw/30-var-150-formula-1-d-3.ine",
+    "n_vars": 30,
+    "y_requested": 5,
+    "y_actual": 5,
+    "chosen_subset_1based": [
+      10,
+      13,
+      15,
+      29,
+      30
+    ],
+    "random_explicit_order_1based": [
+      30,
+      13,
+      29,
+      15,
+      10
+    ],
+    "actual_random_order_used_1based": [
+      30,
+      13,
+      29,
+      15,
+      10
+    ],
+    "actual_greedy_order_used_1based": [
+      10,
+      30,
+      13,
+      15,
+      29
+    ],
+    "heuristic_explicit_order_1based": [
+      10,
+      30,
+      13,
+      15,
+      29
+    ],
+    "actual_heuristic_order_used_1based": [
+      10,
+      30,
+      13,
+      15,
+      29
+    ],
+    "result_random": {
+      "aborted": false,
+      "final_count": 163,
+      "time_s": 0.0010506559992791153
+    },
+    "result_greedy": {
+      "aborted": false,
+      "final_count": 163,
+      "time_s": 0.0016778829995018896
+    },
+    "result_heuristic": {
+      "aborted": false,
+      "final_count": 163,
+      "time_s": 0.0034241110006405506
+    }
+  },
+  {
+    "file": "LRA_Examples/Raw/30-var-150-formula-1-d-4.ine",
+    "n_vars": 30,
+    "y_requested": 5,
+    "y_actual": 5,
+    "chosen_subset_1based": [
+      17,
+      18,
+      22,
+      23,
+      29
+    ],
+    "random_explicit_order_1based": [
+      17,
+      29,
+      22,
+      18,
+      23
+    ],
+    "actual_random_order_used_1based": [
+      17,
+      29,
+      22,
+      18,
+      23
+    ],
+    "actual_greedy_order_used_1based": [
+      23,
+      18,
+      17,
+      29,
+      22
+    ],
+    "heuristic_explicit_order_1based": [
+      23,
+      18,
+      17,
+      29,
+      22
+    ],
+    "actual_heuristic_order_used_1based": [
+      23,
+      18,
+      17,
+      29,
+      22
+    ],
+    "result_random": {
+      "aborted": false,
+      "final_count": 888,
+      "time_s": 0.008518406000803225
+    },
+    "result_greedy": {
+      "aborted": false,
+      "final_count": 376,
+      "time_s": 0.0048054100006993394
+    },
+    "result_heuristic": {
+      "aborted": false,
+      "final_count": 376,
+      "time_s": 0.002866488001018297
+    }
+  },
+  {
+    "file": "LRA_Examples/Raw/30-var-150-formula-1-d-5.ine",
+    "n_vars": 30,
+    "y_requested": 5,
+    "y_actual": 5,
+    "chosen_subset_1based": [
+      7,
+      11,
+      14,
+      19,
+      28
+    ],
+    "random_explicit_order_1based": [
+      28,
+      19,
+      11,
+      7,
+      14
+    ],
+    "actual_random_order_used_1based": [
+      28,
+      19,
+      11,
+      7,
+      14
+    ],
+    "actual_greedy_order_used_1based": [
+      28,
+      19,
+      14,
+      11,
+      7
+    ],
+    "heuristic_explicit_order_1based": [
+      28,
+      19,
+      14,
+      11,
+      7
+    ],
+    "actual_heuristic_order_used_1based": [
+      28,
+      19,
+      14,
+      11,
+      7
+    ],
+    "result_random": {
+      "aborted": true,
+      "final_count": 1078914,
+      "time_s": null
+    },
+    "result_greedy": {
+      "aborted": false,
+      "final_count": 3447672,
+      "time_s": 52.28052255299917
+    },
+    "result_heuristic": {
+      "aborted": false,
+      "final_count": 3447672,
+      "time_s": 53.63201390899849
+    }
+  },
+  {
+    "file": "LRA_Examples/Raw/30-var-150-formula-1-d-6.ine",
+    "n_vars": 30,
+    "y_requested": 5,
+    "y_actual": 5,
+    "chosen_subset_1based": [
+      7,
+      22,
+      23,
+      25,
+      28
+    ],
+    "random_explicit_order_1based": [
+      7,
+      22,
+      25,
+      23,
+      28
+    ],
+    "actual_random_order_used_1based": [
+      7,
+      22,
+      25,
+      23
+    ],
+    "actual_greedy_order_used_1based": [
+      22,
+      28,
+      25,
+      23,
+      7
+    ],
+    "heuristic_explicit_order_1based": [
+      22,
+      28,
+      25,
+      23,
+      7
+    ],
+    "actual_heuristic_order_used_1based": [
+      22,
+      28,
+      25,
+      23,
+      7
+    ],
+    "result_random": {
+      "aborted": true,
+      "final_count": 76517,
+      "time_s": null
+    },
+    "result_greedy": {
+      "aborted": false,
+      "final_count": 3137,
+      "time_s": 0.0252687190004508
+    },
+    "result_heuristic": {
+      "aborted": false,
+      "final_count": 3137,
+      "time_s": 0.02427823600010015
+    }
+  },
+  {
+    "file": "LRA_Examples/Raw/30-var-150-formula-1-d-7.ine",
+    "n_vars": 30,
+    "y_requested": 5,
+    "y_actual": 5,
+    "chosen_subset_1based": [
+      6,
+      12,
+      19,
+      27,
+      30
+    ],
+    "random_explicit_order_1based": [
+      19,
+      12,
+      6,
+      30,
+      27
+    ],
+    "actual_random_order_used_1based": [
+      19,
+      12,
+      6,
+      30,
+      27
+    ],
+    "actual_greedy_order_used_1based": [
+      27,
+      30,
+      12,
+      19,
+      6
+    ],
+    "heuristic_explicit_order_1based": [
+      27,
+      30,
+      12,
+      19,
+      6
+    ],
+    "actual_heuristic_order_used_1based": [
+      27,
+      30,
+      12,
+      19,
+      6
+    ],
+    "result_random": {
+      "aborted": false,
+      "final_count": 140121,
+      "time_s": 1.2133699000005436
+    },
+    "result_greedy": {
+      "aborted": false,
+      "final_count": 2324,
+      "time_s": 0.01855078700100421
+    },
+    "result_heuristic": {
+      "aborted": false,
+      "final_count": 2324,
+      "time_s": 0.02117387799808057
+    }
+  },
+  {
+    "file": "LRA_Examples/Raw/30-var-150-formula-1-d-8.ine",
+    "n_vars": 30,
+    "y_requested": 5,
+    "y_actual": 5,
+    "chosen_subset_1based": [
+      17,
+      19,
+      25,
+      27,
+      30
+    ],
+    "random_explicit_order_1based": [
+      25,
+      17,
+      30,
+      27,
+      19
+    ],
+    "actual_random_order_used_1based": [
+      25,
+      17,
+      30,
+      27,
+      19
+    ],
+    "actual_greedy_order_used_1based": [
+      27,
+      25,
+      30,
+      19,
+      17
+    ],
+    "heuristic_explicit_order_1based": [
+      27,
+      25,
+      19,
+      17,
+      30
+    ],
+    "actual_heuristic_order_used_1based": [
+      27,
+      25,
+      19,
+      17,
+      30
+    ],
+    "result_random": {
+      "aborted": false,
+      "final_count": 275,
+      "time_s": 0.0023810660022718366
+    },
+    "result_greedy": {
+      "aborted": false,
+      "final_count": 275,
+      "time_s": 0.004286450999643421
+    },
+    "result_heuristic": {
+      "aborted": false,
+      "final_count": 275,
+      "time_s": 0.0022242419981921557
+    }
+  },
+  {
+    "file": "LRA_Examples/Raw/30-var-150-formula-1-d-9.ine",
+    "n_vars": 30,
+    "y_requested": 5,
+    "y_actual": 5,
+    "chosen_subset_1based": [
+      2,
+      6,
+      15,
+      22,
+      30
+    ],
+    "random_explicit_order_1based": [
+      2,
+      6,
+      15,
+      22,
+      30
+    ],
+    "actual_random_order_used_1based": [
+      2,
+      6,
+      15
+    ],
+    "actual_greedy_order_used_1based": [
+      22,
+      30,
+      15,
+      6,
+      2
+    ],
+    "heuristic_explicit_order_1based": [
+      30,
+      22,
+      15,
+      6,
+      2
+    ],
+    "actual_heuristic_order_used_1based": [
+      30,
+      22,
+      15,
+      6,
+      2
+    ],
+    "result_random": {
+      "aborted": true,
+      "final_count": 783691,
+      "time_s": null
+    },
+    "result_greedy": {
+      "aborted": false,
+      "final_count": 6229580,
+      "time_s": 98.46696691499892
+    },
+    "result_heuristic": {
+      "aborted": false,
+      "final_count": 6229580,
+      "time_s": 89.74779415099692
+    }
+  }
+]

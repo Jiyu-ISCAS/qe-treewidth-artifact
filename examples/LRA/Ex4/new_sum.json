@@ -1,0 +1,1597 @@
+{
+  "records": [
+    {
+      "file": "LRA_Examples/Raw/20-var-100-formula-1-d-1.ine",
+      "n_vars": 20,
+      "y_requested": 6,
+      "y_actual": 6,
+      "chosen_subset_1based": [
+        2,
+        8,
+        15,
+        16,
+        18,
+        20
+      ],
+      "random_explicit_order_1based": [
+        15,
+        2,
+        20,
+        18,
+        16,
+        8
+      ],
+      "actual_random_order_used_1based": [
+        15,
+        2,
+        20,
+        18,
+        16,
+        8
+      ],
+      "actual_greedy_order_used_1based": [
+        20,
+        8,
+        18,
+        15,
+        16,
+        2
+      ],
+      "heuristic_explicit_order_1based": [
+        20,
+        18,
+        16,
+        15,
+        8,
+        2
+      ],
+      "actual_heuristic_order_used_1based": [
+        20,
+        18,
+        16,
+        15,
+        8,
+        2
+      ],
+      "result_random": {
+        "aborted": false,
+        "final_count": 9440331,
+        "time_s": 89.45128265499807
+      },
+      "result_greedy": {
+        "aborted": false,
+        "final_count": 1572,
+        "time_s": 0.008155914998496883
+      },
+      "result_heuristic": {
+        "aborted": false,
+        "final_count": 1572,
+        "time_s": 0.007401042999845231
+      },
+      "fme_runs_summary": [
+        {
+          "perm_1based": [
+            8,
+            20,
+            18,
+            15,
+            2,
+            16
+          ],
+          "final_count": 5377,
+          "elapsed_s": 0.19208015899857855,
+          "failed": false,
+          "fail_info": null
+        },
+        {
+          "perm_1based": [
+            15,
+            8,
+            2,
+            18,
+            20,
+            16
+          ],
+          "final_count": 388238,
+          "elapsed_s": 15.140544218998912,
+          "failed": false,
+          "fail_info": null
+        },
+        {
+          "perm_1based": [
+            20,
+            8,
+            18,
+            15,
+            16,
+            2
+          ],
+          "final_count": 1572,
+          "elapsed_s": 0.18197779900037858,
+          "failed": false,
+          "fail_info": null
+        },
+        {
+          "perm_1based": [
+            8,
+            20,
+            2,
+            18,
+            16,
+            15
+          ],
+          "final_count": 206527,
+          "elapsed_s": 6.1090998530016805,
+          "failed": false,
+          "fail_info": null
+        },
+        {
+          "perm_1based": [
+            20,
+            16,
+            2,
+            15,
+            18,
+            8
+          ],
+          "final_count": 625676,
+          "elapsed_s": 18.84390219099987,
+          "failed": false,
+          "fail_info": null
+        }
+      ],
+      "fme_best_run": {
+        "perm_1based": [
+          20,
+          8,
+          18,
+          15,
+          16,
+          2
+        ],
+        "final_count": 1572,
+        "elapsed_s": 0.18197779900037858,
+        "failed": false,
+        "fail_info": null
+      }
+    },
+    {
+      "file": "LRA_Examples/Raw/20-var-100-formula-1-d-10.ine",
+      "n_vars": 20,
+      "y_requested": 6,
+      "y_actual": 6,
+      "chosen_subset_1based": [
+        1,
+        4,
+        8,
+        13,
+        15,
+        16
+      ],
+      "random_explicit_order_1based": [
+        13,
+        16,
+        8,
+        4,
+        15,
+        1
+      ],
+      "actual_random_order_used_1based": [
+        13,
+        16,
+        8,
+        4,
+        15,
+        1
+      ],
+      "actual_greedy_order_used_1based": [
+        15,
+        13,
+        16,
+        1,
+        8,
+        4
+      ],
+      "heuristic_explicit_order_1based": [
+        15,
+        13,
+        16,
+        8,
+        1,
+        4
+      ],
+      "actual_heuristic_order_used_1based": [
+        15,
+        13,
+        16,
+        8,
+        1,
+        4
+      ],
+      "result_random": {
+        "aborted": false,
+        "final_count": 2995,
+        "time_s": 0.017450954001105856
+      },
+      "result_greedy": {
+        "aborted": false,
+        "final_count": 1067,
+        "time_s": 0.006743278998328606
+      },
+      "result_heuristic": {
+        "aborted": false,
+        "final_count": 1067,
+        "time_s": 0.00618192399997497
+      },
+      "fme_runs_summary": [
+        {
+          "perm_1based": [
+            15,
+            13,
+            1,
+            8,
+            16,
+            4
+          ],
+          "final_count": 1061,
+          "elapsed_s": 0.038281168999674264,
+          "failed": false,
+          "fail_info": null
+        },
+        {
+          "perm_1based": [
+            13,
+            1,
+            4,
+            16,
+            8,
+            15
+          ],
+          "final_count": 1053,
+          "elapsed_s": 0.07522260999940045,
+          "failed": false,
+          "fail_info": null
+        },
+        {
+          "perm_1based": [
+            4,
+            1,
+            16,
+            8,
+            13,
+            15
+          ],
+          "final_count": 2738,
+          "elapsed_s": 0.22869054799957667,
+          "failed": false,
+          "fail_info": null
+        },
+        {
+          "perm_1based": [
+            15,
+            8,
+            13,
+            1,
+            4,
+            16
+          ],
+          "final_count": 1055,
+          "elapsed_s": 0.048370148999310913,
+          "failed": false,
+          "fail_info": null
+        },
+        {
+          "perm_1based": [
+            1,
+            8,
+            16,
+            4,
+            13,
+            15
+          ],
+          "final_count": 1059,
+          "elapsed_s": 0.06526704899988545,
+          "failed": false,
+          "fail_info": null
+        }
+      ],
+      "fme_best_run": {
+        "perm_1based": [
+          13,
+          1,
+          4,
+          16,
+          8,
+          15
+        ],
+        "final_count": 1053,
+        "elapsed_s": 0.07522260999940045,
+        "failed": false,
+        "fail_info": null
+      }
+    },
+    {
+      "file": "LRA_Examples/Raw/20-var-100-formula-1-d-2.ine",
+      "n_vars": 20,
+      "y_requested": 6,
+      "y_actual": 6,
+      "chosen_subset_1based": [
+        1,
+        3,
+        13,
+        15,
+        16,
+        19
+      ],
+      "random_explicit_order_1based": [
+        13,
+        15,
+        19,
+        16,
+        1,
+        3
+      ],
+      "actual_random_order_used_1based": [
+        13,
+        15,
+        19,
+        16,
+        1,
+        3
+      ],
+      "actual_greedy_order_used_1based": [
+        13,
+        19,
+        15,
+        16,
+        3,
+        1
+      ],
+      "heuristic_explicit_order_1based": [
+        19,
+        13,
+        16,
+        15,
+        3,
+        1
+      ],
+      "actual_heuristic_order_used_1based": [
+        19,
+        13,
+        16,
+        15,
+        3,
+        1
+      ],
+      "result_random": {
+        "aborted": false,
+        "final_count": 22275,
+        "time_s": 0.11805876799917314
+      },
+      "result_greedy": {
+        "aborted": false,
+        "final_count": 9365,
+        "time_s": 0.04610018400126137
+      },
+      "result_heuristic": {
+        "aborted": false,
+        "final_count": 9365,
+        "time_s": 0.04584717599936994
+      },
+      "fme_runs_summary": [
+        {
+          "perm_1based": [
+            13,
+            19,
+            3,
+            15,
+            1,
+            16
+          ],
+          "final_count": 3661283,
+          "elapsed_s": 111.62919464399965,
+          "failed": false,
+          "fail_info": null
+        },
+        {
+          "perm_1based": [
+            16,
+            3,
+            13,
+            15,
+            19,
+            1
+          ],
+          "final_count": 29496,
+          "elapsed_s": 1.914826455000366,
+          "failed": false,
+          "fail_info": null
+        },
+        {
+          "perm_1based": [
+            19,
+            13,
+            3,
+            15,
+            1,
+            16
+          ],
+          "final_count": 3661283,
+          "elapsed_s": 111.33492405499965,
+          "failed": false,
+          "fail_info": null
+        },
+        {
+          "perm_1based": [
+            15,
+            19,
+            1,
+            16,
+            13,
+            3
+          ],
+          "final_count": 930807,
+          "elapsed_s": 28.93823112999962,
+          "failed": false,
+          "fail_info": null
+        },
+        {
+          "perm_1based": [
+            13,
+            19,
+            1,
+            3,
+            16,
+            15
+          ],
+          "final_count": 15950,
+          "elapsed_s": 0.7729243359990505,
+          "failed": true,
+          "fail_info": {
+            "step": 4,
+            "var_1based": 16,
+            "message": "capacity_exceeded"
+          }
+        }
+      ],
+      "fme_best_run": {
+        "perm_1based": [
+          16,
+          3,
+          13,
+          15,
+          19,
+          1
+        ],
+        "final_count": 29496,
+        "elapsed_s": 1.914826455000366,
+        "failed": false,
+        "fail_info": null
+      }
+    },
+    {
+      "file": "LRA_Examples/Raw/20-var-100-formula-1-d-3.ine",
+      "n_vars": 20,
+      "y_requested": 6,
+      "y_actual": 6,
+      "chosen_subset_1based": [
+        4,
+        7,
+        13,
+        14,
+        17,
+        20
+      ],
+      "random_explicit_order_1based": [
+        4,
+        14,
+        20,
+        7,
+        17,
+        13
+      ],
+      "actual_random_order_used_1based": [
+        4,
+        14,
+        20,
+        7,
+        17,
+        13
+      ],
+      "actual_greedy_order_used_1based": [
+        13,
+        20,
+        17,
+        14,
+        7,
+        4
+      ],
+      "heuristic_explicit_order_1based": [
+        13,
+        20,
+        17,
+        14,
+        7,
+        4
+      ],
+      "actual_heuristic_order_used_1based": [
+        13,
+        20,
+        17,
+        14,
+        7,
+        4
+      ],
+      "result_random": {
+        "aborted": false,
+        "final_count": 16664,
+        "time_s": 0.29480983600296895
+      },
+      "result_greedy": {
+        "aborted": false,
+        "final_count": 532,
+        "time_s": 0.0035440329993434716
+      },
+      "result_heuristic": {
+        "aborted": false,
+        "final_count": 532,
+        "time_s": 0.0029263789983815514
+      },
+      "fme_runs_summary": [
+        {
+          "perm_1based": [
+            4,
+            17,
+            13,
+            14,
+            20,
+            7
+          ],
+          "final_count": 16440,
+          "elapsed_s": 0.47366157400028897,
+          "failed": false,
+          "fail_info": null
+        },
+        {
+          "perm_1based": [
+            13,
+            4,
+            14,
+            17,
+            7,
+            20
+          ],
+          "final_count": 16440,
+          "elapsed_s": 0.7804275679991406,
+          "failed": false,
+          "fail_info": null
+        },
+        {
+          "perm_1based": [
+            4,
+            14,
+            20,
+            7,
+            13,
+            17
+          ],
+          "final_count": 16440,
+          "elapsed_s": 1.4355754000007437,
+          "failed": false,
+          "fail_info": null
+        },
+        {
+          "perm_1based": [
+            20,
+            17,
+            4,
+            7,
+            14,
+            13
+          ],
+          "final_count": 43865,
+          "elapsed_s": 3.3608050729999377,
+          "failed": false,
+          "fail_info": null
+        },
+        {
+          "perm_1based": [
+            14,
+            7,
+            17,
+            20,
+            13,
+            4
+          ],
+          "final_count": 532,
+          "elapsed_s": 0.03360895999867353,
+          "failed": false,
+          "fail_info": null
+        }
+      ],
+      "fme_best_run": {
+        "perm_1based": [
+          14,
+          7,
+          17,
+          20,
+          13,
+          4
+        ],
+        "final_count": 532,
+        "elapsed_s": 0.03360895999867353,
+        "failed": false,
+        "fail_info": null
+      }
+    },
+    {
+      "file": "LRA_Examples/Raw/20-var-100-formula-1-d-4.ine",
+      "n_vars": 20,
+      "y_requested": 6,
+      "y_actual": 6,
+      "chosen_subset_1based": [
+        4,
+        6,
+        8,
+        10,
+        14,
+        16
+      ],
+      "random_explicit_order_1based": [
+        6,
+        14,
+        16,
+        10,
+        4,
+        8
+      ],
+      "actual_random_order_used_1based": [
+        6,
+        14,
+        16,
+        10,
+        4,
+        8
+      ],
+      "actual_greedy_order_used_1based": [
+        10,
+        16,
+        6,
+        14,
+        8,
+        4
+      ],
+      "heuristic_explicit_order_1based": [
+        10,
+        16,
+        6,
+        14,
+        8,
+        4
+      ],
+      "actual_heuristic_order_used_1based": [
+        10,
+        16,
+        6,
+        14,
+        8,
+        4
+      ],
+      "result_random": {
+        "aborted": false,
+        "final_count": 392761,
+        "time_s": 2.19252277600026
+      },
+      "result_greedy": {
+        "aborted": false,
+        "final_count": 15211,
+        "time_s": 0.07572827100011637
+      },
+      "result_heuristic": {
+        "aborted": false,
+        "final_count": 15211,
+        "time_s": 0.07523657300043851
+      },
+      "fme_runs_summary": [
+        {
+          "perm_1based": [
+            4,
+            16,
+            14,
+            8,
+            6,
+            10
+          ],
+          "final_count": 564196,
+          "elapsed_s": 20.37849778799864,
+          "failed": true,
+          "fail_info": {
+            "step": 3,
+            "var_1based": 8,
+            "message": "capacity_exceeded"
+          }
+        },
+        {
+          "perm_1based": [
+            14,
+            16,
+            10,
+            6,
+            4,
+            8
+          ],
+          "final_count": 390402,
+          "elapsed_s": 11.46664822800085,
+          "failed": false,
+          "fail_info": null
+        },
+        {
+          "perm_1based": [
+            8,
+            6,
+            4,
+            10,
+            16,
+            14
+          ],
+          "final_count": 20682,
+          "elapsed_s": 0.8231641479997052,
+          "failed": true,
+          "fail_info": {
+            "step": 4,
+            "var_1based": 16,
+            "message": "capacity_exceeded"
+          }
+        },
+        {
+          "perm_1based": [
+            8,
+            6,
+            10,
+            4,
+            16,
+            14
+          ],
+          "final_count": 1777011,
+          "elapsed_s": 60.52872118800042,
+          "failed": true,
+          "fail_info": {
+            "step": 5,
+            "var_1based": 14,
+            "message": "capacity_exceeded"
+          }
+        },
+        {
+          "perm_1based": [
+            8,
+            10,
+            16,
+            4,
+            14,
+            6
+          ],
+          "final_count": 1190258,
+          "elapsed_s": 39.05775950299903,
+          "failed": true,
+          "fail_info": {
+            "step": 5,
+            "var_1based": 6,
+            "message": "capacity_exceeded"
+          }
+        }
+      ],
+      "fme_best_run": {
+        "perm_1based": [
+          14,
+          16,
+          10,
+          6,
+          4,
+          8
+        ],
+        "final_count": 390402,
+        "elapsed_s": 11.46664822800085,
+        "failed": false,
+        "fail_info": null
+      }
+    },
+    {
+      "file": "LRA_Examples/Raw/20-var-100-formula-1-d-5.ine",
+      "n_vars": 20,
+      "y_requested": 6,
+      "y_actual": 6,
+      "chosen_subset_1based": [
+        1,
+        2,
+        3,
+        6,
+        18,
+        19
+      ],
+      "random_explicit_order_1based": [
+        19,
+        18,
+        1,
+        6,
+        2,
+        3
+      ],
+      "actual_random_order_used_1based": [
+        19,
+        18,
+        1,
+        6,
+        2,
+        3
+      ],
+      "actual_greedy_order_used_1based": [
+        19,
+        18,
+        3,
+        1,
+        6,
+        2
+      ],
+      "heuristic_explicit_order_1based": [
+        19,
+        18,
+        3,
+        1,
+        6,
+        2
+      ],
+      "actual_heuristic_order_used_1based": [
+        19,
+        18,
+        3,
+        1,
+        6,
+        2
+      ],
+      "result_random": {
+        "aborted": true,
+        "final_count": 684773,
+        "time_s": null
+      },
+      "result_greedy": {
+        "aborted": false,
+        "final_count": 2319881,
+        "time_s": 21.856336012999236
+      },
+      "result_heuristic": {
+        "aborted": false,
+        "final_count": 2319881,
+        "time_s": 21.67758320199937
+      },
+      "fme_runs_summary": [
+        {
+          "perm_1based": [
+            3,
+            19,
+            18,
+            6,
+            2,
+            1
+          ],
+          "final_count": 30706,
+          "elapsed_s": 0.8598212030010473,
+          "failed": true,
+          "fail_info": {
+            "step": 5,
+            "var_1based": 1,
+            "message": "capacity_exceeded"
+          }
+        },
+        {
+          "perm_1based": [
+            18,
+            19,
+            2,
+            6,
+            1,
+            3
+          ],
+          "final_count": 39779,
+          "elapsed_s": 1.209365908000109,
+          "failed": true,
+          "fail_info": {
+            "step": 4,
+            "var_1based": 1,
+            "message": "capacity_exceeded"
+          }
+        },
+        {
+          "perm_1based": [
+            2,
+            18,
+            6,
+            19,
+            1,
+            3
+          ],
+          "final_count": 43512,
+          "elapsed_s": 1.4808163990001049,
+          "failed": true,
+          "fail_info": {
+            "step": 3,
+            "var_1based": 19,
+            "message": "capacity_exceeded"
+          }
+        },
+        {
+          "perm_1based": [
+            18,
+            1,
+            6,
+            3,
+            19,
+            2
+          ],
+          "final_count": 107043,
+          "elapsed_s": 3.488805819000845,
+          "failed": true,
+          "fail_info": {
+            "step": 4,
+            "var_1based": 19,
+            "message": "capacity_exceeded"
+          }
+        },
+        {
+          "perm_1based": [
+            18,
+            2,
+            1,
+            6,
+            3,
+            19
+          ],
+          "final_count": 14138,
+          "elapsed_s": 0.46906835099980526,
+          "failed": true,
+          "fail_info": {
+            "step": 3,
+            "var_1based": 6,
+            "message": "capacity_exceeded"
+          }
+        }
+      ],
+      "fme_best_run": null
+    },
+    {
+      "file": "LRA_Examples/Raw/20-var-100-formula-1-d-6.ine",
+      "n_vars": 20,
+      "y_requested": 6,
+      "y_actual": 6,
+      "chosen_subset_1based": [
+        9,
+        10,
+        13,
+        14,
+        15,
+        20
+      ],
+      "random_explicit_order_1based": [
+        10,
+        9,
+        20,
+        14,
+        15,
+        13
+      ],
+      "actual_random_order_used_1based": [
+        10,
+        9,
+        20,
+        14,
+        15,
+        13
+      ],
+      "actual_greedy_order_used_1based": [
+        13,
+        9,
+        20,
+        10,
+        14,
+        15
+      ],
+      "heuristic_explicit_order_1based": [
+        13,
+        9,
+        10,
+        14,
+        20,
+        15
+      ],
+      "actual_heuristic_order_used_1based": [
+        13,
+        9,
+        10,
+        14,
+        20,
+        15
+      ],
+      "result_random": {
+        "aborted": false,
+        "final_count": 117,
+        "time_s": 0.000702848999935668
+      },
+      "result_greedy": {
+        "aborted": false,
+        "final_count": 117,
+        "time_s": 0.0012875409993284848
+      },
+      "result_heuristic": {
+        "aborted": false,
+        "final_count": 117,
+        "time_s": 0.0007385310018435121
+      },
+      "fme_runs_summary": [
+        {
+          "perm_1based": [
+            13,
+            10,
+            14,
+            15,
+            20,
+            9
+          ],
+          "final_count": 117,
+          "elapsed_s": 0.011354043001119862,
+          "failed": false,
+          "fail_info": null
+        },
+        {
+          "perm_1based": [
+            13,
+            9,
+            20,
+            15,
+            14,
+            10
+          ],
+          "final_count": 117,
+          "elapsed_s": 0.010359711999626597,
+          "failed": false,
+          "fail_info": null
+        },
+        {
+          "perm_1based": [
+            13,
+            14,
+            9,
+            15,
+            10,
+            20
+          ],
+          "final_count": 117,
+          "elapsed_s": 0.010459921000801842,
+          "failed": false,
+          "fail_info": null
+        },
+        {
+          "perm_1based": [
+            14,
+            15,
+            10,
+            13,
+            20,
+            9
+          ],
+          "final_count": 117,
+          "elapsed_s": 0.01100297899938596,
+          "failed": false,
+          "fail_info": null
+        },
+        {
+          "perm_1based": [
+            10,
+            9,
+            13,
+            14,
+            20,
+            15
+          ],
+          "final_count": 117,
+          "elapsed_s": 0.009753308000654215,
+          "failed": false,
+          "fail_info": null
+        }
+      ],
+      "fme_best_run": {
+        "perm_1based": [
+          10,
+          9,
+          13,
+          14,
+          20,
+          15
+        ],
+        "final_count": 117,
+        "elapsed_s": 0.009753308000654215,
+        "failed": false,
+        "fail_info": null
+      }
+    },
+    {
+      "file": "LRA_Examples/Raw/20-var-100-formula-1-d-7.ine",
+      "n_vars": 20,
+      "y_requested": 6,
+      "y_actual": 6,
+      "chosen_subset_1based": [
+        4,
+        6,
+        9,
+        14,
+        15,
+        17
+      ],
+      "random_explicit_order_1based": [
+        4,
+        9,
+        6,
+        14,
+        17,
+        15
+      ],
+      "actual_random_order_used_1based": [
+        4,
+        9,
+        6,
+        14,
+        17,
+        15
+      ],
+      "actual_greedy_order_used_1based": [
+        15,
+        14,
+        9,
+        17,
+        6,
+        4
+      ],
+      "heuristic_explicit_order_1based": [
+        15,
+        14,
+        17,
+        9,
+        6,
+        4
+      ],
+      "actual_heuristic_order_used_1based": [
+        15,
+        14,
+        17,
+        9,
+        6,
+        4
+      ],
+      "result_random": {
+        "aborted": false,
+        "final_count": 932,
+        "time_s": 0.008329258998855948
+      },
+      "result_greedy": {
+        "aborted": false,
+        "final_count": 405,
+        "time_s": 0.0038038450002204627
+      },
+      "result_heuristic": {
+        "aborted": false,
+        "final_count": 422,
+        "time_s": 0.0030356050010595936
+      },
+      "fme_runs_summary": [
+        {
+          "perm_1based": [
+            9,
+            4,
+            15,
+            17,
+            6,
+            14
+          ],
+          "final_count": 835,
+          "elapsed_s": 0.040280336999785504,
+          "failed": false,
+          "fail_info": null
+        },
+        {
+          "perm_1based": [
+            4,
+            6,
+            17,
+            9,
+            14,
+            15
+          ],
+          "final_count": 949,
+          "elapsed_s": 0.05991496800015739,
+          "failed": false,
+          "fail_info": null
+        },
+        {
+          "perm_1based": [
+            6,
+            17,
+            9,
+            15,
+            14,
+            4
+          ],
+          "final_count": 518,
+          "elapsed_s": 0.03593392500079062,
+          "failed": false,
+          "fail_info": null
+        },
+        {
+          "perm_1based": [
+            6,
+            4,
+            17,
+            14,
+            9,
+            15
+          ],
+          "final_count": 949,
+          "elapsed_s": 0.06449573099962436,
+          "failed": false,
+          "fail_info": null
+        },
+        {
+          "perm_1based": [
+            15,
+            9,
+            17,
+            4,
+            6,
+            14
+          ],
+          "final_count": 835,
+          "elapsed_s": 0.03765172400017036,
+          "failed": false,
+          "fail_info": null
+        }
+      ],
+      "fme_best_run": {
+        "perm_1based": [
+          6,
+          17,
+          9,
+          15,
+          14,
+          4
+        ],
+        "final_count": 518,
+        "elapsed_s": 0.03593392500079062,
+        "failed": false,
+        "fail_info": null
+      }
+    },
+    {
+      "file": "LRA_Examples/Raw/20-var-100-formula-1-d-8.ine",
+      "n_vars": 20,
+      "y_requested": 6,
+      "y_actual": 6,
+      "chosen_subset_1based": [
+        1,
+        2,
+        3,
+        7,
+        12,
+        17
+      ],
+      "random_explicit_order_1based": [
+        12,
+        3,
+        7,
+        2,
+        1,
+        17
+      ],
+      "actual_random_order_used_1based": [
+        12,
+        3,
+        7,
+        2
+      ],
+      "actual_greedy_order_used_1based": [
+        17,
+        12,
+        7,
+        2,
+        3,
+        1
+      ],
+      "heuristic_explicit_order_1based": [
+        17,
+        12,
+        7,
+        2,
+        3,
+        1
+      ],
+      "actual_heuristic_order_used_1based": [
+        17,
+        12,
+        7,
+        2,
+        3,
+        1
+      ],
+      "result_random": {
+        "aborted": true,
+        "final_count": 27548,
+        "time_s": null
+      },
+      "result_greedy": {
+        "aborted": true,
+        "final_count": 32518,
+        "time_s": null
+      },
+      "result_heuristic": {
+        "aborted": true,
+        "final_count": 32518,
+        "time_s": null
+      },
+      "fme_runs_summary": [
+        {
+          "perm_1based": [
+            1,
+            7,
+            17,
+            3,
+            12,
+            2
+          ],
+          "final_count": 84034,
+          "elapsed_s": 3.1174556639998627,
+          "failed": true,
+          "fail_info": {
+            "step": 2,
+            "var_1based": 17,
+            "message": "capacity_exceeded"
+          }
+        },
+        {
+          "perm_1based": [
+            3,
+            2,
+            17,
+            12,
+            1,
+            7
+          ],
+          "final_count": 5989118,
+          "elapsed_s": 250.46422478000022,
+          "failed": true,
+          "fail_info": {
+            "step": 3,
+            "var_1based": 12,
+            "message": "capacity_exceeded"
+          }
+        },
+        {
+          "perm_1based": [
+            3,
+            1,
+            12,
+            2,
+            7,
+            17
+          ],
+          "final_count": 126357,
+          "elapsed_s": 4.2405680249994475,
+          "failed": true,
+          "fail_info": {
+            "step": 2,
+            "var_1based": 12,
+            "message": "capacity_exceeded"
+          }
+        },
+        {
+          "perm_1based": [
+            17,
+            3,
+            2,
+            7,
+            1,
+            12
+          ],
+          "final_count": 36228,
+          "elapsed_s": 1.181829535000361,
+          "failed": true,
+          "fail_info": {
+            "step": 3,
+            "var_1based": 7,
+            "message": "capacity_exceeded"
+          }
+        },
+        {
+          "perm_1based": [
+            17,
+            3,
+            7,
+            12,
+            1,
+            2
+          ],
+          "final_count": 2964117,
+          "elapsed_s": 102.68331700800081,
+          "failed": true,
+          "fail_info": {
+            "step": 4,
+            "var_1based": 1,
+            "message": "capacity_exceeded"
+          }
+        }
+      ],
+      "fme_best_run": null
+    },
+    {
+      "file": "LRA_Examples/Raw/20-var-100-formula-1-d-9.ine",
+      "n_vars": 20,
+      "y_requested": 6,
+      "y_actual": 6,
+      "chosen_subset_1based": [
+        2,
+        5,
+        11,
+        12,
+        17,
+        20
+      ],
+      "random_explicit_order_1based": [
+        12,
+        2,
+        17,
+        5,
+        11,
+        20
+      ],
+      "actual_random_order_used_1based": [
+        12,
+        2,
+        17,
+        5
+      ],
+      "actual_greedy_order_used_1based": [
+        12,
+        20,
+        11,
+        17,
+        5,
+        2
+      ],
+      "heuristic_explicit_order_1based": [
+        12,
+        20,
+        11,
+        17,
+        5,
+        2
+      ],
+      "actual_heuristic_order_used_1based": [
+        12,
+        20,
+        11,
+        17,
+        5,
+        2
+      ],
+      "result_random": {
+        "aborted": true,
+        "final_count": 10140,
+        "time_s": null
+      },
+      "result_greedy": {
+        "aborted": false,
+        "final_count": 474106,
+        "time_s": 3.1817925830000604
+      },
+      "result_heuristic": {
+        "aborted": false,
+        "final_count": 474106,
+        "time_s": 3.954002187001606
+      },
+      "fme_runs_summary": [
+        {
+          "perm_1based": [
+            11,
+            20,
+            2,
+            12,
+            17,
+            5
+          ],
+          "final_count": 198036,
+          "elapsed_s": 5.695576749001702,
+          "failed": true,
+          "fail_info": {
+            "step": 5,
+            "var_1based": 5,
+            "message": "capacity_exceeded"
+          }
+        },
+        {
+          "perm_1based": [
+            17,
+            12,
+            20,
+            5,
+            2,
+            11
+          ],
+          "final_count": 543978,
+          "elapsed_s": 16.724735804000375,
+          "failed": true,
+          "fail_info": {
+            "step": 5,
+            "var_1based": 11,
+            "message": "capacity_exceeded"
+          }
+        },
+        {
+          "perm_1based": [
+            17,
+            11,
+            12,
+            5,
+            2,
+            20
+          ],
+          "final_count": 315920,
+          "elapsed_s": 9.573972863998279,
+          "failed": true,
+          "fail_info": {
+            "step": 5,
+            "var_1based": 20,
+            "message": "capacity_exceeded"
+          }
+        },
+        {
+          "perm_1based": [
+            5,
+            12,
+            20,
+            17,
+            11,
+            2
+          ],
+          "final_count": 1670695,
+          "elapsed_s": 66.12793490000149,
+          "failed": true,
+          "fail_info": {
+            "step": 4,
+            "var_1based": 11,
+            "message": "capacity_exceeded"
+          }
+        },
+        {
+          "perm_1based": [
+            11,
+            20,
+            17,
+            2,
+            5,
+            12
+          ],
+          "final_count": 739165,
+          "elapsed_s": 22.696304311999484,
+          "failed": true,
+          "fail_info": {
+            "step": 5,
+            "var_1based": 12,
+            "message": "capacity_exceeded"
+          }
+        }
+      ],
+      "fme_best_run": null
+    }
+  ],
+  "fme_aggregate_best_stats": {
+    "n_records_processed": 10,
+    "n_successful_best": 7,
+    "avg_final_count": 60527.142857142855,
+    "avg_elapsed_s": 1.9597101835715875
+  }
+}
