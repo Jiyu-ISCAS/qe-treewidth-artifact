@@ -8,7 +8,7 @@ Hao Wu, Jiyu Zhu, Amir Kafshdar Goharshady, Jie An, Bican Xia, and Naijun Zhan
 
 TACAS 2026
 
-## Directory structure
+## Directory Structure
 
 ```shell
 qe-treewidth-artifact/
@@ -55,19 +55,25 @@ qe-treewidth-artifact/
 
     When the activation succeeds your shell prompt will typically show `(.venv)` at the start and you can run `pip3 list` to check installed packages.
 
-3. Run the main algorithm to extract heuristic elimination orders from `.smt2` files using the provided script
+3. (*Optional*) Run the smoke test early to test the algorithm pipeline
+
+    ```shell
+    bash scripts/smoke_test.sh
+    ```
+
+4. Run the main algorithm to extract heuristic elimination orders from `.smt2` files using the provided script
 
     ```shell
     bash scripts/heuristic.sh
     ```
 
-4. Verify results on LRA examples by running the bulk test script
+5. Verify results on LRA examples by running the bulk test script
 
     ```shell
     bash scripts/bulk_FME.sh
     ```
 
-5. Verify results on NRA examples
+6. Verify results on NRA examples
    - Download `Wolfram Engine 14.3` from the official site (<https://www.wolfram.com/engine/>) since no direct download link is available. `Wolfram Engine` is free but requires a one-time activation. Click `Start Download`, follow the `Get your license` link, sign in with your Wolfram ID, and complete the activation.
    - Make the installer executable and install (example)
 
@@ -89,22 +95,70 @@ qe-treewidth-artifact/
         bash scripts/bulk_CAD.sh
         ```
 
-## Explanation on important files
+## System Requirements and Performance
 
-### Heuristic results
+### Operating System
+
+We test this artifact on Windows 11 WSL 2 Ubuntu 24.04 and TACAS 2026 VM ubuntu 25.04 available at <https://zenodo.org/records/17171929>. We recommend running this artifact in Linux.
+
+### Hardware Requirements
+
+The heuristic algorithm itself has modest hardware requirements. However, both `FME` and `CAD` algorithms are computationally expensive in both time and memory. On our test machine(`i7-13700` CPU with `32GB` RAM), running all LRA examples typically takes about 30 minutes, while running all NRA examples takes about 3 hours.
+
+The minimum recommended RAM for running the full artifact is `16GB`. We recommend `24GB` or `32GB` of RAM to avoid premature termination on larger instances.
+
+Accordingly, in addition to the `smoke test` described above, we provide alternative ways to run smaller subsets of the experiments.
+
+### Test on Single LRA Instance
+
+If you are interested in a single LRA instance set `Ex<i>`, you can run only that set using
+
+```shell
+bash scripts/FME/Ex<i>.sh  # replace <i> with a number from 1..6
+```
+
+### Test on Single NRA Instance
+
+If you are interested in a single NRA instance `Ex<i>`, you can run only that instance using
+
+```shell
+wolframscript src/CAD/Ex<i>.wls # replace <i> with a number from 7..12
+```
+
+You may also evaluate specific heuristic elimination orders for a single instance by passing additional options
+
+```shell
+wolframscript src/CAD/Ex<i>.wls [-SVO] [-Brown] [-PEO] [-TD]  # replace <i> with a number from 7..12
+```
+
+- `-SVO`: use the order suggested by Maple’s `SuggestVariableOrder`
+
+- `-Brown`: use the Brown heuristic
+
+- `-PEO`: use the PEO heuristic
+
+- `-TD`: use the elimination order produced by our heuristic
+
+You may select any subset of these four options. If no options are specified, all four orders are evaluated by default.
+
+## Explanation of Important Files
+
+### Heuristic Results
 
 After running `bash scripts/heuristic.sh` new working directories are created under `tests/`
 
 ```shell
 tests/
-├── graph/  # associated primal graphs, formats see https://pacechallenge.org/2017/treewidth/
-├── intermediate/  # intermediate results or each LRA/NRA instance consist of 2 parts: the substitution map mapping original variable names to x1 ... xn; and standard Mathematica format formula
-├── order/  # the results of our heuristic algorithm and other heuristics
-├── TD_results/  # tree decomposition results, formats see https://pacechallenge.org/2017/treewidth/
+├── graph/          # associated primal graphs (formats: see https://pacechallenge.org/2017/treewidth/)
+├── intermediate/   # intermediate results; for each LRA/NRA instance this contains two files:
+                    #   1) a substitution map (original variable names → x1 ... xn)
+                    #   2) a formula in standard Mathematica format
+├── order/          # heuristic elimination orders produced by our algorithm and by other heuristics
+├── TD_results/     # tree decomposition results (formats: see https://pacechallenge.org/2017/treewidth/)
 └── ...
 ```
 
-### LRA/FME results
+### LRA/FME Results
 
 ```shell
 tests/
@@ -114,7 +168,7 @@ tests/
 
 For each set of 10 instances we record three different elimination orders in separate `.json` files and include a summary `.json` file in the same directory. Note that for larger instances (IDs 2–5) random ordering performs poorly: FME may terminate early after reaching the limit of $10^7$ inequality constraints. In those cases the recorded `final_count` is the estimate at termination and the `time_s` is the runtime at termination.
 
-### NRA/CAD results
+### NRA/CAD Results
 
 ```shell
 tests/
@@ -124,7 +178,7 @@ tests/
 
 Each instance’s results are stored as a `.csv` file under the above directory, easy to read.
 
-### LRA examples
+### LRA Examples
 
 ```shell
 LRA/
@@ -134,7 +188,7 @@ LRA/
     └── Ex6/
 ```
 
-Note that each LRA instance is written in 2 equivalent formats: the SMT-LIB format (`.smt2` file) and pycddlib format (`.ine` file).
+Note that each LRA instance is written in 2 equivalent formats: the SMT-LIB format (`.smt2` file) and `pycddlib` format (`.ine` file).
 
 If a linear system has $n$ variables and $m$ inequalities:
 
@@ -149,7 +203,7 @@ $$
 \end{equation*}
 $$
 
-then the pycddlib format describes the above linear system in the following way:
+then the `pycddlib` format describes the above linear system in the following way:
 
 $$
 \begin{equation*}
