@@ -81,11 +81,15 @@ Accordingly, in addition to the `smoke test` described in `Setup`, we provide al
     bash scripts/heuristic.sh
     ```
 
+    see [Heuristic Results](#heuristic-results) for more details.
+
 5. Verify results on LRA examples by running the bulk test script
 
     ```shell
     bash scripts/bulk_FME.sh
     ```
+
+    see [LRA/FME Results](#lrafme-results) for more details.
 
 6. Verify results on NRA examples
    - Download `Wolfram Engine 14.3` from the official site (<https://www.wolfram.com/engine/>) since no direct download link is available. `Wolfram Engine` is free but requires a one-time activation. Click `Start Download`, follow the `Get your license` link, sign in with your Wolfram ID, and complete the activation.
@@ -108,6 +112,8 @@ Accordingly, in addition to the `smoke test` described in `Setup`, we provide al
         ```shell
         bash scripts/bulk_CAD.sh
         ```
+
+        see [NRA/CAD Results](#nracad-results) for more details.
 
 ## Partial Tests
 
@@ -144,41 +150,6 @@ wolframscript src/CAD/Ex<i>.wls [-SVO] [-Brown] [-PEO] [-TD]  # replace <i> with
 You may select any subset of these four options. If no options are specified, all four orders are evaluated by default.
 
 ## Explanation of Important Files
-
-### Heuristic Results
-
-After running `bash scripts/heuristic.sh` new working directories are created under `tests/`
-
-```shell
-tests/
-├── graph/          # associated primal graphs (formats: see https://pacechallenge.org/2017/treewidth/)
-├── intermediate/   # intermediate results; for each LRA/NRA instance this contains two files:
-                    #   1) a substitution map (original variable names → x1 ... xn)
-                    #   2) a formula in standard Mathematica format
-├── order/          # heuristic elimination orders produced by our algorithm and by other heuristics
-├── TD_results/     # tree decomposition results (formats: see https://pacechallenge.org/2017/treewidth/)
-└── ...
-```
-
-### LRA/FME Results
-
-```shell
-tests/
-├── FME_results/
-└── ...
-```
-
-For each set of 10 instances we record three different elimination orders in separate `.json` files and include a summary `.json` file in the same directory. Note that for larger instances (IDs 2–5) random ordering performs poorly: FME may terminate early after reaching the limit of $10^7$ inequality constraints. In those cases the recorded `final_count` is the estimate at termination and the `time_s` is the runtime at termination.
-
-### NRA/CAD Results
-
-```shell
-tests/
-├── CAD_results/
-└── ...
-```
-
-Each instance’s results are stored as a `.csv` file under the above directory, easy to read.
 
 ### LRA Examples
 
@@ -221,3 +192,142 @@ $$
 \end{split}
 \end{equation*}
 $$
+
+### Heuristic Results
+
+After running `bash scripts/heuristic.sh` new working directories are created under `tests/`
+
+```shell
+tests/
+├── graph/          # associated primal graphs (formats: see https://pacechallenge.org/2017/treewidth/)
+├── intermediate/   # intermediate results; for each LRA/NRA instance this contains two files:
+                    #   1) a substitution map (original variable names → x1 ... xn)
+                    #   2) a formula in standard Mathematica format
+├── order/          # heuristic elimination orders produced by our algorithm and by other heuristics
+├── TD_results/     # tree decomposition results (formats: see https://pacechallenge.org/2017/treewidth/)
+└── ...
+```
+
+### LRA/FME Results
+
+```shell
+tests/
+├── FME_results/
+    ├── Ex1/
+        ├── Ex1-1.json  # results of example instance set 1, intance 1
+        ├── ...
+        ├── Ex1-10.json
+        └── summary.json  # results summary of 10 instances
+    ├── Ex2/
+    ├── ...
+    └── Ex6/
+└── ...
+```
+
+For each set of 10 instances we record three different elimination orders in separate `.json` files and include a `summary.json` file in the same directory.
+
+#### Per-instance files (`Ex<i>-<j>.json`)
+
+Each per-instance JSON records results for three elimination orders:
+
+- `random`: best random order (index is 1-based)
+- `greedy`: greedy heuristic
+- `heuristic`: our heuristic
+
+Each order contains these fields:
+
+- `aborted`: true if FME terminated early due to the inequality-capacity limit.
+- `final_count`: number of inequality constraints at termination (estimate if aborted).
+- `time_s`: runtime in seconds at termination.
+
+> Note that for larger instances (`ID 2–5`) random ordering performs poorly: FME may abort early after reaching the limit of $10^{7}$ inequality constraints. In such cases, the recorded `final_count` is the estimate at termination and `time_s` is the runtime measured at termination.
+
+##### Example per-instance JSON (schema)
+
+```json
+{
+  "file": "examples/LRA/Ex1/Ex1-1.ine",
+  "n_vars": 15,
+  "actual_best_random_order_used_1based": [3,7,11,10,2],
+  "result_random": {
+    "aborted": false,
+    "final_count": 67642,
+    "time_s": 0.5226932239999975
+  },
+  "actual_greedy_order_used_1based": [11,7,10,3,2],
+  "result_greedy": {
+    "aborted": false,
+    "final_count": 12346,
+    "time_s": 0.04764381599999723
+  },
+  "actual_heuristic_order_used_1based": [11,7,10,2,3],
+  "result_heuristic": {
+    "aborted": false,
+    "final_count": 16712,
+    "time_s": 0.06850071700000271
+  }
+}
+```
+
+#### Summary file (`summary.json`)**
+
+`summary.json` contains aggregated statistics:
+
+- counts of successful vs. aborted instances per order
+- averages for `final_count` and `time_s`
+
+Averaging rules:
+
+- `random`: averages computed over all 10 instances.
+- `greedy` and `heuristic`: averages computed only over successful instances (`aborted == false`).
+
+##### Example summary JSON (schema)
+
+```json
+[
+  {
+    "order": "random",
+    "success": 10,
+    "abort": 0,
+    "ave_cnt": 51608.4,
+    "ave_runtime": 0.22128993920000006
+  },
+  {
+    "order": "greedy",
+    "success": 10,
+    "abort": 0,
+    "ave_cnt": 4404.7,
+    "ave_runtime": 0.01671946560000137
+  },
+  {
+    "order": "heuristic",
+    "success": 10,
+    "abort": 0,
+    "ave_cnt": 4841.3,
+    "ave_runtime": 0.018299490699999053
+  }
+]
+```
+
+### NRA/CAD Results
+
+```shell
+tests/
+├── CAD_results/
+    ├── Ex7.csv
+    ├── ...
+    └── Ex12.csv
+└── ...
+```
+
+Each instance’s results are stored as a `.csv` file under the above directory, easy to read.
+
+#### Example result CSV
+
+```csv
+"Method","Time (s)","Cell Count"
+"(1) Maple SuggestVariableOrder",456.821663,1133532
+"(2) Brown heuristics",144.838163,271120
+"(3) PEO",95.546835,274724
+"(4) Brown + Tree Decomp",31.534584,110828
+```
