@@ -14,25 +14,39 @@ TACAS 2026
 qe-treewidth-artifact/
 ├── examples/
     ├── LRA/  # randomly generated examples written in pycddlib format and SMT-LIB format
-    ├── NRA/  # only SMT-LIB format
+    └── NRA/  # only SMT-LIB format
 ├── scripts/
 ├── src/
     ├── CAD/  # wolfram programs for NRA examples
     ├── FME/  # naive implementation of Fourier–Motzkin elimination
-    ├── heuristics/  # extract heuristic elimination order from .smt2 files
+    └── heuristics/  # extract heuristic elimination order from .smt2 files
 ├── tests/  # auxiliary tools and working directory when running the artifact
 ├── wheelhouse/  # some python packages for offline environment setup
 ├── LICENSE
 └── README.md
 ```
 
+## System Requirements and Performance
+
+### Operating System
+
+This artifact has been tested on Windows 11 (`WSL 2, Ubuntu 24.04`) and on the TACAS 2026 virtual machine (`Ubuntu 25.04`) available at <https://zenodo.org/records/17171929>. We recommend running the artifact on a native Linux environment.
+
+### Hardware Requirements
+
+The heuristic algorithm itself has modest hardware requirements and takes only a few seconds. However, both `FME` and `CAD` algorithms are computationally expensive in both time and memory. On our test machine (`i7-13700` CPU with `32GB` RAM), running all LRA examples typically takes about 30 minutes, while running all NRA examples takes about 3 hours.
+
+The minimum recommended RAM for running the full artifact is `16GB`. We recommend `24GB` or `32GB` of RAM to avoid premature termination on larger instances.
+
+Accordingly, in addition to the `smoke test` described in `Setup`, we provide alternative ways to run smaller subsets of the experiments.
+
 ## Setup
 
-- OpenJDK 21.0.9 (for tree decomposition tool)
+- OpenJDK 21.0.9 (required for tree decomposition tool)
 - Python 3.13
 - networkx 3.5 (provided in this repository)
 - PySMT 0.9.6 (provided in this repository)
-- Wolfram engime 14.3 (for NRA examples)
+- Wolfram engime 14.3 (required for NRA examples)
 
 1. Clone this repository from GitHub
 
@@ -95,20 +109,7 @@ qe-treewidth-artifact/
         bash scripts/bulk_CAD.sh
         ```
 
-## System Requirements and Performance
-
-### Operating System
-
-This artifact has been tested on Windows 11 (`WSL 2`, Ubuntu 24.04) and on the TACAS 2026 virtual machine (`Ubuntu 25.04`) available at <https://zenodo.org/records/17171929>
-. We recommend running the artifact on a native Linux environment.
-
-### Hardware Requirements
-
-The heuristic algorithm itself has modest hardware requirements. However, both `FME` and `CAD` algorithms are computationally expensive in both time and memory. On our test machine(`i7-13700` CPU with `32GB` RAM), running all LRA examples typically takes about 30 minutes, while running all NRA examples takes about 3 hours.
-
-The minimum recommended RAM for running the full artifact is `16GB`. We recommend `24GB` or `32GB` of RAM to avoid premature termination on larger instances.
-
-Accordingly, in addition to the `smoke test` described above, we provide alternative ways to run smaller subsets of the experiments.
+## Partial Tests
 
 ### Test on Single LRA Instance
 
