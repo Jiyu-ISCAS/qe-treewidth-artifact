@@ -8,7 +8,7 @@ Hao Wu, Jiyu Zhu, Amir Kafshdar Goharshady, Jie An, Bican Xia, and Naijun Zhan
 
 TACAS 2026
 
-This artifact is also available at Zenodo (<https://zenodo.org/records/18150641>).
+This artifact is also available at Zenodo (<https://doi.org/10.5281/zenodo.18150641>).
 
 ## Directory Structure
 
