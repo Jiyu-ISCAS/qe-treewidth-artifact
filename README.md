@@ -70,14 +70,16 @@ Accordingly, in addition to the `smoke test` described in `Setup`, we provide al
     ```
 
     When the activation succeeds your shell prompt will typically show `(.venv)` at the start and you can run `pip3 list` to check installed packages.
+  
+## Reproduce Results
 
-3. (*Optional*) Run the smoke test early to test the algorithm pipeline
+1. (*Optional*) Run the smoke test early to test the algorithm pipeline
 
     ```shell
     bash scripts/smoke_test.sh
     ```
 
-4. Run the main algorithm to extract heuristic elimination orders from `.smt2` files using the provided script
+2. Run the main algorithm to extract heuristic elimination orders from `.smt2` files using the provided script
 
     ```shell
     bash scripts/heuristic.sh
@@ -85,7 +87,7 @@ Accordingly, in addition to the `smoke test` described in `Setup`, we provide al
 
     see [Heuristic Results](#heuristic-results) for more details.
 
-5. Verify results on LRA examples by running the bulk test script
+3. Verify results on LRA examples (`Table 1` in the paper) by running the bulk test script
 
     ```shell
     bash scripts/bulk_FME.sh
@@ -93,7 +95,7 @@ Accordingly, in addition to the `smoke test` described in `Setup`, we provide al
 
     see [LRA/FME Results](#lrafme-results) for more details.
 
-6. Verify results on NRA examples
+4. Verify results on NRA examples (`Table 2` in the paper)
    - Download `Wolfram Engine 14.3` from the official site (<https://www.wolfram.com/engine/>) since no direct download link is available. `Wolfram Engine` is free but requires a one-time activation. Click `Start Download`, follow the `Get your license` link, sign in with your Wolfram ID, and complete the activation.
    - Make the installer executable and install (example)
 
@@ -117,13 +119,11 @@ Accordingly, in addition to the `smoke test` described in `Setup`, we provide al
 
         see [NRA/CAD Results](#nracad-results) for more details.
 
-7. (*Optional*) Clean up the setup virtual environemt and running results using the script
+5. (*Optional*) Clean up the setup virtual environemt and running results using the script
 
     ```shell
     bash scripts/clean.sh
     ```
-
-8. (*Optional*) You can run our heuristic (`Step 4`) on your own examples as long as they are put under `examples/LRA/` (`.ine` and `.smt2` format) or `examples/NRA/` (`.smt2` format).
 
 ## Partial Tests
 
@@ -158,6 +158,16 @@ wolframscript src/CAD/Ex<i>.wls [-SVO] [-Brown] [-PEO] [-TD]  # replace <i> with
 - `-TD`: use the elimination order produced by our heuristic
 
 You may select any subset of these four options. If no options are specified, all four orders are evaluated by default.
+
+## Reuse
+
+We provide additional tests for LRA and NRA inputs that are not included in the research paper. This section demonstrates that our software can process inputs provided the LRA/NRA system files use the `.ine` and `.smt2` format.
+
+You can run the additional tests with
+
+```shell
+bash scripts/additional_tests.sh 
+```
 
 ## Explanation of Important Files
 
