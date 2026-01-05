@@ -123,6 +123,8 @@ Accordingly, in addition to the `smoke test` described in `Setup`, we provide al
     bash scripts/clean.sh
     ```
 
+8. (*Optional*) You can run our heuristic (`Step 4`) on your own examples as long as they are put under `examples/LRA/` (`.ine` and `.smt2` format) or `examples/NRA/` (`.smt2` format).
+
 ## Partial Tests
 
 ### Test on Single LRA Instance
