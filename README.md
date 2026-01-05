@@ -1,12 +1,14 @@
 # Quantifier Elimination Meets Treewidth
 
-This repository contains the research artifact for the publication:
+This repository (<https://github.com/Jiyu-ISCAS/qe-treewidth-artifact>) contains the research artifact for the publication:
 
 Quantifier Elimination Meets Treewidth
 
 Hao Wu, Jiyu Zhu, Amir Kafshdar Goharshady, Jie An, Bican Xia, and Naijun Zhan
 
 TACAS 2026
+
+This artifact is also available at Zenodo (<https://zenodo.org/records/18150641>).
 
 ## Directory Structure
 
@@ -30,7 +32,7 @@ qe-treewidth-artifact/
 
 ### Operating System
 
-This artifact has been tested on Windows 11 (`WSL 2, Ubuntu 24.04`) and on the TACAS 2026 virtual machine (`Ubuntu 25.04`) available at <https://zenodo.org/records/17171929>. We recommend running the artifact on a native Linux environment.
+The artifact targets `AMD64` systems, and has been tested on Windows 11 (`WSL 2, Ubuntu 24.04`) and on the TACAS 2026 virtual machine (`Ubuntu 25.04`) available at <https://zenodo.org/records/17171929>. We recommend running the artifact on a native Linux environment.
 
 ### Hardware Requirements
 
