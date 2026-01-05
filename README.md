@@ -115,6 +115,12 @@ Accordingly, in addition to the `smoke test` described in `Setup`, we provide al
 
         see [NRA/CAD Results](#nracad-results) for more details.
 
+7. (*Optional*) Clean up the setup virtual environemt and running results using the script
+
+    ```shell
+    bash scripts/clean.sh
+    ```
+
 ## Partial Tests
 
 ### Test on Single LRA Instance
